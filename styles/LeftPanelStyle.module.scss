@@ -1,0 +1,38 @@
+.sectionContainer {
+    width: 89px;
+    height: 100vh;
+    padding: 16px;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+
+    .avatar{
+        width: 62px;
+        height: 62px;
+        padding: 16px;
+        border-radius: 100%;
+        background: #36393F;
+        cursor: pointer;
+        transition: all 0.15s ease-in;
+
+        span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        &:hover{
+            border-radius: 20px;
+            background: #5865F2;
+        }
+    }
+    .separator {
+        width: 40px;
+        height: 0px;
+        border: 2px solid #36393F;
+    }
+}
