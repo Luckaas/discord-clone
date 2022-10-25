@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "A",
+        "order": 0,
+        "dummy_txt": "Teste A",
+        "channels": [
+            {
+                "id": 1,
+                "type": "text",
+                "name": "geral",
+                "order": 0,
+                "content": {
+                    "messages": [
+                        {
+                            "id": 1,
+                            "user_id": 1,
+                            "user_name": "Lukas",
+                            "date": 1666465095552,
+                            "message": "kkkkkkkk"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "type": "voice",
+                "name": "Geral",
+                "content": {
+                    "users": [
+                        "pe",
+                        "Lukas",
+                        "gabiribis",
+                        "Burguesa01",
+                        "Abelha",
+                        "Allakazan"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "B",
+        "order": 1,
+        "dummy_txt": "Teste B",
+        "channels": []
+    },
+    {
+        "id": 3,
+        "name": "C",
+        "order": 2,
+        "dummy_txt": "Teste C",
+        "channels": []
+    }
+]

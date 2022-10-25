@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "status": "Ocupado",
+        "name": "Lukas",
+        "lastMessage": 1666484537914
+    },
+    {
+        "id": 2,
+        "status": "Disponível",
+        "name": "Avatar 2",
+        "lastMessage": 1666484537914
+    },
+    {
+        "id": 3,
+        "status": "",
+        "name": "Avatar 3",
+        "lastMessage": 1666484537914
+    },
+    {
+        "id": 4,
+        "status": "Ausente",
+        "name": "Avatar 4",
+        "lastMessage": 1666484537914
+    }
+]

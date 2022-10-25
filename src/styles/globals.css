@@ -15,6 +15,11 @@ a {
   box-sizing: border-box;
 }
 
+.mainSection{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { LeftPanel } from '../components'
-
+import { Directs } from '../components'
+import styles from '../styles/Home.module.scss'
 export default function Home() {
   return (
     <div>
@@ -10,8 +10,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <LeftPanel />
+      <main className={styles.mainContainer}>
+        <Directs />
       </main>
     </div>
   )
