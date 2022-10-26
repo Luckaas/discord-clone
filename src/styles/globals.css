@@ -15,7 +15,8 @@ a {
   box-sizing: border-box;
 }
 
-.mainSection{
+main{
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
 }

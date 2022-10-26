@@ -1,19 +1,47 @@
-import { DiscordLogo } from 'phosphor-react'
-import LeftPanelStyle from '../styles/LeftPanelStyle.module.scss'
+import { DiscordLogo, Path } from 'phosphor-react'
+import styles from '../styles/LeftPanelStyle.module.scss'
+import { useRouter } from 'next/router'
 import rooms from '../public/data/rooms.json'
 
-export function LeftPanel() {
+export function LeftPanel () {
+    const router = useRouter()
+    const routerGo = (pathname, rid) => {
+        const toPush = {pathname}
+        // '/'
+        // '/room/rid'
+
+        if (pathname !== '/')
+            toPush.query = { rid }
+        
+        router.push(toPush)
+    }
+
+    const isActive = (id) => parseInt(router.query.rid) === id
+    const noActive = !('rid' in router.query)
+
+
     return (
-        <section className={LeftPanelStyle.sectionContainer}>
-            <div className={LeftPanelStyle.avatar}>
+        <section className={styles.sectionContainer}>
+            <div onClick={() => {routerGo('/')}} className={noActive ? styles.avatarActive : styles.avatar}>
+                {
+                    router.asPath === '/' 
+                        ? (<span className={styles.selected} />)
+                        : ''
+                }
                 <DiscordLogo size={30} weight="fill" />
             </div>
 
-            <div className={LeftPanelStyle.separator} />
+            <div className={styles.separator} />
 
             {
                 rooms.map(room => (
-                    <div key={room.id} className={LeftPanelStyle.avatar}>
+                    <div onClick={() => {routerGo('/room/[rid]', room.id)}} key={room.id} className={isActive(room.id) ? styles.avatarActive : styles.avatar}>
+                        {
+                            isActive(room.id) 
+                                ? (<span className={styles.selected} />)
+                                : ''
+                        }
+                        
                         <span>{ room.name.charAt(0) }</span>
                     </div>
                 ))

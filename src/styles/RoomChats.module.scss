@@ -1,0 +1,165 @@
+.sectionContainer {
+    width: 100%;
+    display: flex;
+    border-radius: 8px 0 0 0;
+    background: #36393F;
+
+    .leftPanel {
+        padding-bottom: 65px;
+        width: 260px;
+        min-width: 260px;
+        height: 100%;
+        background: #2F3136;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    
+        header {
+            height: 62px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00000020;
+            justify-content: space-between;
+            padding: 0 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.15s ease-out;
+            
+            &:hover {
+                background: #FFFFFF20;
+            }
+        }
+
+        main {
+            padding: 16px 8px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            
+            .channelGroup {
+                font-weight: 500;
+                display: flex;
+                flex-direction: column;
+                
+                .channelsTitle {
+                    display: flex;
+                    padding: 4px 0;
+                    cursor: pointer;
+                    gap: 8px;
+                    align-items: center;
+                    color: #8E9297;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                .textList {
+                    .hiddenIcon{
+                        display: none;
+                    }
+
+                    & > div {
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 8px;
+                        border-radius: 4px;
+                        color: #8E9297;
+                        
+                        div {
+                            display: flex;
+                            gap: 8px;
+                            align-items: center;
+                        }
+
+                        &:hover {
+                            background: #42464D;
+                            color: white;
+
+                            .hiddenIcon {
+                                display: inherit;
+                            }
+                        }
+                    }
+                }
+
+                .voiceList {
+                    .avatar{
+                        width: 32px;
+                        height: 32px;
+                        text-align: center;
+                        border-radius: 100%;
+                        background: #36393F;
+
+                        span {
+                            margin: 0 auto;
+                        }
+                    }
+
+                    & > div {
+                        color: #8E9297;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 2px;
+                        margin-left: 32px;
+                        border-radius: 4px;
+
+                        div {
+                            display: flex;
+                            gap: 8px;
+                            align-items: center;
+                        }
+
+                        &:hover {
+                            background: #42464D;
+                            color: white;
+                        }
+                    }
+                }
+
+                .channelInfo {
+                    display: flex;
+                    cursor: pointer;
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    padding: 8px;
+                    color: #8E9297;
+
+                    .hiddenIcons {
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: white;
+                        background: #42464D;
+
+                        .hiddenIcons {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+
+                    div {
+                        gap: 8px;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .hiddenList {
+        display: none;
+    }
+
+    .arrowRight {
+        transform: rotate();
+    }
+}
